@@ -1,5 +1,6 @@
 import Co4Score
 import Co4Gameboard
+import random
 
 class Co4Game(Co4Score.Score):
     def __init__(self, amountPlayer):
@@ -8,7 +9,7 @@ class Co4Game(Co4Score.Score):
 
     def chooseGame(self):
         # create a gameboard (we'll be able to choose which one later on)
-        return Co4Gameboard.Gameboard()
+        return Co4Gameboard.Gameboard(random.randint(0,1))
 
     def playGame(self):
         doesContinue = 1

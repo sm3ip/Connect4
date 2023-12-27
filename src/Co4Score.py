@@ -17,5 +17,6 @@ class Score():
     def getScore(self):
         tempMess = "The current score is  : "
         for i in range(len(self.scores)):
-            tempMess += "\n {} : ".format(self.scores[i])
+            tempMess += "\n Player{} ".format(i)
+            tempMess += ":{}  ".format(self.scores[i])
         return tempMess
