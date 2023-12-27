@@ -5,8 +5,9 @@ class Gameboard:
     def __init__(self, turn): #turn is an int choosing which player goes first
         self.board = np.full((6, 7), -1, dtype=int) #sets the board at its original value
         self.playCount = 0 # to check for stalemate (stalemate is at 6*7=42)
-        self.winner = 0 # 0 is no one, 1 is P1, 2 is P2
+        self.winner = -1 # -1 is no one, 0 is P1, 1 is P2
         self.turn = turn # which player's turn it is
+        self.name = "Connect 4"
 
     def takeTurn(self, column):
         return True
@@ -20,3 +21,6 @@ class Gameboard:
     def showBoard(self):
         # gotta print more information about the current turn
         print(self.board)
+
+    def play(self):
+        return True
